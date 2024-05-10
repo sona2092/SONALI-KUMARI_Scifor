@@ -1,0 +1,25 @@
+2. What are the features of HTML?
+* HTML stands for Hypertext Markup Language.
+* It is used for creating web pages.
+* It uses various tags and attributes to build the structure of a web page.
+* It provides us to add multimedia files like images and videos.
+* It also allows us to create forms.
+* We can also style the structure and make it presentable to the user. 
+
+3. What is MIME?
+MIME stands for Multipurpose Internet Mail Extensions.
+It allows different kinds of data to be exchanged via the Internet.
+It extends the format of email(Electronic Mail) messages, by specifying how the mesaages are formatted and transmitted.
+
+4. What is HTML?
+HTML full form is Hypertext Markup Language.
+It is a standard markup language used to create and design documents on the web.
+It provides a structure to the web page.
+It has various paired tags like <html>,<head>,<body>..etc
+It has also some non-paired tags like <br>.
+
+5. What are void elements(empty) in HTML?
+They are also known as empty elements/ non-paired elements.
+They are known as empty elements becuase they do not have any content or closing tag.
+They are known as self-closing tags.
+Some examples are <img>,<br>,<hr>...etc.
