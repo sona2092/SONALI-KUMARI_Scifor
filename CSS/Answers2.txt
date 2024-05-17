@@ -1,0 +1,85 @@
+1. What is CSS? What are the different types of selectors in CSS?
+-> CSS stands for Cascading Style Sheets.
+-> It is a style sheet language which is used for describing the presentation of the document in HTML.
+-> It is used to make the webpage presentable for a better user experience.
+-> It also describes how the elements should be rendered on user's screen.
+
+Different types of selectors in CSS are:-
+
+* Element selector - which selects elements based on the element name.
+
+Syntax - 
+p {
+  color: red;
+}
+
+* ID selector - which selects a single element with a specific id.
+
+Syntax -
+#header {
+  background-color: blue;
+}
+
+* Class selector - which selects all the elements within a particular class.
+
+Syntax - 
+.menu {
+  font-size: 14px;
+}
+
+* Universal selector - which selects all elements.
+
+Syntax -
+* {
+  margin: 0;
+  padding: 0;
+}
+
+2. What is CSS Box Model?
+CSS Box Model is a fundamental concept in CSS that describes the rectangular boxes generated for elements and how these boxes are laid out for the elements.
+
+It consists of some elements,
+* Content - It contains the actual content of the box, where the text and image appears.
+
+* Padding - It is the space between the content and the border.
+
+* Border - It is defined as the area around the padding, its styling can be defined.
+
+* Margin - It is the space outside the box, which creates some distance between one box with other boxes.
+
+3. Define the list types in HTML.
+There are three main types of lists in HTML,
+
+* Ordered List(ol):
+It is used to create a list of items in order. The list items are usually in numbers.
+
+Syntax:
+<ol>
+  <li>First<li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+* Unordered List(ul):
+It is used to create a list of items where order in not required. The list items are usually in bullet points.
+
+Syntax:
+<ul>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ul>
+
+* Description List(dl):
+It is used to create a list of terms with descriptions.
+Each term is written in dt tag(description term) and each description is written in dd tag(description detail).
+
+Syntax:
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+</dl>
+
+
