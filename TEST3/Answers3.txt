@@ -1,0 +1,110 @@
+1. What are the various formatting tags in HTML?
+
+There are various formatting/presentational tags provided by HTML to make out website look more presentable to the user.
+Some of the tags include:
+
+* <b> - It allows text to appear in bold format.
+* <i> - It allows text to be displayed in italic format.
+* <sup> - It stands for superscript. It is used to display power to any number or string.
+* <sub> - It stands for subscript. It is used to indicate base to any number or string.
+* <small> - It makes the text to appear in small size.
+* <big> - It makes the text to appear in big size.
+* <u> - It makes the normal text into underlined text.
+* <del> - It shows the text as deleted (Strike through).
+* <pre> - It stands for preformatted text. It means the text will appear in the same formatted way in browser as written in the editor.
+* <address> - It is used to indicate text as an address by displaying it in italic format.
+
+
+2. How can we merge two rows or columns into a single row and column? Also write a code.
+
+To merge two rows or columns in a table, we need to use rowspan and colspan respectively.
+It is used in the <td> or <th> tags.
+
+Example:-
+
+For column:-
+<table>
+<tr>
+<th colspan="2">Column merged</th>
+</tr>
+<tr>
+<td>row1 & col1</td>
+<td>row1 & col2</td>
+</tr>
+</table>
+
+For row:-
+<table>
+<tr>
+<th rowspan="2">Row merged</th>
+<td>row1 & col1</td>
+</tr>
+<tr>
+<td>row2 & col1</td>
+</tr>
+</table>
+
+
+3. How is cellspacing different from cellpadding?
+
+* cellspacing - It specifies the space between the cells of the table. It defines the border-spacing of the table.
+
+* cellpadding - It specifies the space between the contents of the cell and its border. It defines the inside padding of each cell.
+
+Both are attributes of <table> tag.
+
+Example:-
+
+<table border="1" cellspacing="10">
+<tr>
+<td>C1</td>
+<td>C2</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>C4</td>
+</tr>
+</table>
+
+
+<table border="1" cellpadding="10">
+<tr>
+<td>C1</td>
+<td>C2</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>C4</td>
+</tr>
+</table>
+
+
+4. What are semantic elements?
+
+Semantic elements are HTML elements that clearly describes their meaning to the user.
+These are tags which accurately describes their purpose so that it is easy for developers to understand.
+
+Some of the semantic elements are:-
+
+* <header> - It is present at the start of the page. It represents an introductory content for the user and some navigation menus.
+
+* <footer> - It is present at the end of the page. It represents some legal information such as copyright and some links related to it.
+
+* <figcaption> - It is used to add a caption to your image.
+
+* <nav> - We can say it as navigation. Which provides a set of links to navigate around the website.
+
+* <section> - This tag defines the sections in the webpages such as documents, chapter etc. It also divides the pages into various sections and subsections.
+
+
+6. What is the alt attribute in HTML?
+
+alt attribute in HTML is used to provide some alternative text for the image.
+It will appear when the image is not being displayed/loaded due to some error.
+
+Syntax :
+<img src="image.jpg" alt="Description">
+
+
+
+
