@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Foundation Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
+
+    <style>
+        h2{
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <div class="cell medium-6 medium-offset-3">
+                    <h2>Form Data</h2>
+                    <form>
+                        <label for="name">Name
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </label>
+        
+                        <label for="email">Email
+                            <input type="email" id="email" name="email" placeholder="Enter your email">
+                        </label>
+        
+                        <label for="password">Password
+                            <input type="password" id="password" name="password" placeholder="Enter your password">
+                        </label>
+
+                        <fieldset class="fieldset">
+                            <legend>Gender</legend>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </fieldset>
+                        
+                        <fieldset class="fieldset">
+                            <legend>Interests</legend>
+                            <input type="checkbox" id="interest1" name="interests" value="reading">
+                            <label for="interest1">Reading</label>
+                            <input type="checkbox" id="interest2" name="interests" value="traveling">
+                            <label for="interest2">Traveling</label>
+                            <input type="checkbox" id="interest3" name="interests" value="sports">
+                            <label for="interest3">Sports</label>
+                            <input type="checkbox" id="interest4" name="interests" value="music">
+                            <label for="interest4">Music</label>
+                        </fieldset>
+        
+                        <button class="button success">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </body>
+</html>
