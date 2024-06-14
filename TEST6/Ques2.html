@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>var,let and const</title>
+        <script type="text/JavaScript">
+            //First Block
+            {
+                var varVariable = "var variable";
+                let letVariable = "let variable";
+                const constVariable = "const variable";
+
+                document.write(varVariable+ "<br>");  
+                document.write(letVariable+ "<br>");  
+                document.write(constVariable+ "<br>"+ "<br>");
+            }
+              
+            //Second Block
+            {
+                var varVariable = "var variable inside scope";
+                let letVariable = "let variable inside scope";
+
+                document.write("<b>Inside Scope :</b>"+ "<br>");
+                document.write(varVariable+ "<br>");  
+                document.write(letVariable+ "<br>"+ "<br>");  
+            }
+
+            document.write("<b>Outside Scope :</b>"+ "<br>");
+            document.write(varVariable+ "<br>");  
+            document.write(letVariable+ "<br>");  //no output as let variable cannot be accessed outside the block
+    
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
