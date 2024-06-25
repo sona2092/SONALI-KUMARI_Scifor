@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+<script>
+    function add(num1, num2) {
+        return num1 + num2;
+    }
+
+    function subtract(num1, num2) {
+        return num1 - num2;
+    }
+
+    function multiply(num1, num2) {
+        return num1 * num2;
+    }
+
+    function divide(num1, num2) {
+        if (num2 === 0) {
+            return "Error: Division by zero is not allowed.";
+        }
+        return num1 / num2;
+    }
+
+    const num1 = parseFloat(prompt("Enter the first number:"));
+    const num2 = parseFloat(prompt("Enter the second number:"));
+
+    const operation = prompt("Choose an operation (1: Add, 2: Subtract, 3: Multiply, 4: Divide):");
+
+    let result;
+    switch (operation) {
+        case "1":
+            result = add(num1, num2);
+            break;
+        case "2":
+            result = subtract(num1, num2);
+            break;
+        case "3":
+            result = multiply(num1, num2);
+            break;
+        case "4":
+            result = divide(num1, num2);
+            break;
+        default:
+            result = "Error: Invalid operation.";
+            break;
+    }
+    document.write("First number: " +num1+"<br>");
+    document.write("Second number: " +num2+"<br>");
+    document.write("The result is: " + result);
+</script>
+
+</body>
+</html>
