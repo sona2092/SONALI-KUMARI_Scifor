@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjust Date</title>
+</head>
+<body>
+
+<script>
+    function adjustDate(date) {
+        let currentMonth = date.getMonth(); 
+        date.setMonth(currentMonth + 1); 
+        date.setDate(15);
+        let fullYear = date.getFullYear();
+    }
+
+    let date = new Date(); 
+    adjustDate(date);
+
+    document.write("Date: "+date+"<br>"); 
+    document.write("Year: "+date.getFullYear()); 
+</script>
+
+</body>
+</html>

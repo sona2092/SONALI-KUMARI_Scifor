@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse and Sort Array</title>
+</head>
+<body>
+
+<script>
+    function reverseAndSortArray(charArray) {
+        charArray.reverse();
+        document.write("Reversed Array: "+charArray+"<br>")
+        charArray.sort();
+    }
+    let characters = ['d', 'a', 'c', 'b', 'e'];
+    document.write("Original Array: "+characters+"<br>"); 
+    reverseAndSortArray(characters);
+    document.write("Reversed and Sorted Array: "+characters); 
+</script>
+
+</body>
+</html>

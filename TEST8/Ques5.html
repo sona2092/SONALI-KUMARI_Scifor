@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulate Array</title>
+</head>
+<body>
+
+<script>
+    function manipulateArray(array) {
+        array.push("volvo");
+        document.write("Added Element: "+array+"<br>");
+        array.pop();
+        document.write("After popping: "+array+"<br>");
+        array.forEach((element, index) => {
+            array[index] = element.toUpperCase();
+        });
+        let joinedString = array.join(',');
+    }
+
+    let inputArray = ["bmw", "audi", "mercedes"];
+    document.write("Original Array: "+inputArray+"<br>"); 
+    manipulateArray(inputArray);
+
+    document.write("Manipulated Array: "+inputArray); 
+</script>
+
+</body>
+</html>

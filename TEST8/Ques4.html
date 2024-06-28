@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Format Strings</title>
+</head>
+<body>
+
+<script>
+    function formatString(input) {
+        let upperCaseString = input.toUpperCase();
+        document.write("Uppercase String: "+upperCaseString+"<br>"); 
+        let lowerCaseString = input.toLowerCase();
+        document.write("Lowercase String: "+lowerCaseString+"<br>"); 
+        let substring = input.substring(2, 6); 
+        document.write("Substring: "+substring); 
+    }
+
+    let inputString = "HelloWorld";
+    document.write("Original String: "+inputString+"<br>"); 
+    formatString(inputString);
+</script>
+
+</body>
+</html>

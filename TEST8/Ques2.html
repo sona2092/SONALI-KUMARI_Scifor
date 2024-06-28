@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Characters</title>
+</head>
+<body>
+
+<script>
+    function countCharacters(charArray, charCount) {
+        charArray.forEach(char => {
+            if (charCount[char]) {
+                charCount[char]++;
+            } else {
+                charCount[char] = 1;
+            }
+        });
+    }
+    let characters = ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'c'];
+    document.write("Original Array: "+characters+"<br>")
+    let charCount = {}; 
+
+    countCharacters(characters, charCount);
+    document.write("Character Count: "+ JSON.stringify(charCount)); 
+</script>
+
+</body>
+</html>
