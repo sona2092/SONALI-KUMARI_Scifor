@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Request</title>
+</head>
+<body>
+    <h1>XMLHttpRequest</h1>
+    <button onclick="f1()">Click here</button>
+    <div id="ajaxData"></div>
+
+    <script>
+        function f1() {
+            const request = new XMLHttpRequest();
+            request.open("GET", "https://jsonplaceholder.typicode.com/comments", true);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4 && request.status === 200) {
+                    const jsonResponse = JSON.parse(request.responseText);
+                    displayData(jsonResponse);
+                }
+            };
+            request.send();
+        }
+
+        function displayData(data) {
+            const container = document.getElementById("ajaxData");
+            container.innerHTML = "";
+            data.forEach(item => {
+                const div = document.createElement("div");
+                div.innerHTML = `<h3>${item.title}</h3><p>${item.body}</p>`;
+                container.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
