@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Props and State</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        class Person extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {
+                    age: this.props.age,
+                    name: this.props.name,
+                    city: this.props.city
+                };
+            }
+
+            updatePerson = () => {
+                this.setState({
+                    name: "Sonali Kumari",
+                    city: "Bokaro, Jharkhand"
+                });
+            };
+
+            render() {
+                return (
+                    <div>
+                        <h1>Hello, My name is {this.state.name}.</h1>
+                        <p>I am {this.state.age} years old.</p>
+                        <p>I live in {this.state.city}.</p>
+                        <button onClick={this.updatePerson}>Update</button>
+                    </div>
+                );
+            }
+        }
+
+        class App extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Person name="Sonali" age={24} city="Bokaro" />
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
