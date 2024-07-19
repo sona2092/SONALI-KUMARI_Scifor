@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+
+        function UsernameInput() {
+            const [username, setUsername] = useState('');
+
+            const handleChange = (e) => {
+                setUsername(e.target.value);
+            };
+
+            return (
+                <div>
+                    <input type="text" value={username} onChange={handleChange} placeholder="Enter your username" />
+                    <p>Username: {username}</p>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<UsernameInput />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

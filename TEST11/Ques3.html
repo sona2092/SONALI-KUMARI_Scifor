@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function UserList() {
+            const [users, setUsers] = useState([]);
+
+            useEffect(() => {
+                fetch('https://dummyjson.com/users')
+                    .then(response => response.json())
+                    .then(data => setUsers(data.users));
+            }, []);
+
+            return (
+                <div>
+                    <h2>List of Users</h2>
+                    <ul>
+                        {users.map(user => (
+                            <li key={user.id}>{user.firstName} {user.lastName}</li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<UserList />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
