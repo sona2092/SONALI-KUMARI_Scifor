@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UseRef</title>
+    <style>
+        .highlight {
+            border: 2px solid green;
+        }
+    </style>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useRef } = React;
+
+        function App() {
+            const inputRef = useRef(null);
+
+            const highlightInput = () => {
+                if (inputRef.current.classList.contains('highlight')) {
+                    inputRef.current.classList.remove('highlight');
+                } else {
+                    inputRef.current.classList.add('highlight');
+                }
+            };
+
+            return (
+                <div>
+                    <input ref={inputRef} type="text" placeholder="Type something here" />
+                    <button onClick={highlightInput}>
+                        Highlight Input
+                    </button>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
