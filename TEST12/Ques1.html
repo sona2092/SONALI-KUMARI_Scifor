@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context API</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .counter {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .button-increment {
+            background-color: lightgreen;
+            border: 1px solid green;
+        }
+
+        .button-decrement {
+            background-color: lightcoral;
+            border: 1px solid red;
+        }
+
+        .button-reset {
+            background-color: lightblue;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        const { useState, createContext, useContext } = React;
+
+        const CounterContext = createContext();
+
+        const CounterProvider = ({ children }) => {
+            const [count, setCount] = useState(0);
+
+            const increment = () => setCount(count + 1);
+            const decrement = () => setCount(count - 1);
+            const reset = () => setCount(0);
+
+            return (
+                <CounterContext.Provider value={{ count, increment, decrement, reset }}>
+                    {children}
+                </CounterContext.Provider>
+            );
+        };
+
+        const CounterDisplay = () => {
+            const { count } = useContext(CounterContext);
+            return <div className="counter">Counter Value: {count}</div>;
+        };
+
+        const CounterButtons = () => {
+            const { increment, decrement, reset } = useContext(CounterContext);
+            return (
+                <div className="buttons">
+                    <button className="button button-increment" onClick={increment}>Increment</button>
+                    <button className="button button-decrement" onClick={decrement}>Decrement</button>
+                    <button className="button button-reset" onClick={reset}>Reset</button>
+                </div>
+            );
+        };
+
+        const App = () => {
+            return (
+                <CounterProvider>
+                    <div className="container">
+                        <CounterDisplay />
+                        <CounterButtons />
+                    </div>
+                </CounterProvider>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+</body>
+
+</html>
