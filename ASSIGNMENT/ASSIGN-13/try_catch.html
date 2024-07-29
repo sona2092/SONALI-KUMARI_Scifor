@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+</head>
+<body>
+    <h1>Try Catch</h1>
+    <script>
+        function divideNumbers(a, b) {
+            try {
+                if (b === 0) {
+                    throw new Error("Division by zero is not allowed");
+                }
+
+                let result = a / b;
+                document.write("Result: " +result+"<br>");
+            } catch (error) {
+                document.write(error);
+            }
+        }
+
+        divideNumbers(30, 5); 
+        divideNumbers(5, 0); 
+    </script>
+</body>
+</html>
