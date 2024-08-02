@@ -1,0 +1,17 @@
+What is a Restful API?
+
+Ans - A REST API is an application programming interface that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer.
+
+1. Stateless: Each time a client makes a request to the server, it includes all the information needed for the server to fulfill the request. The server doesn’t keep track of previous requests.
+
+2. Client-Server Architecture: The client and server are separate. The client asks for data or actions, and the server provides them. They can be developed and updated independently.
+
+3. Cacheable: Some responses can be stored by the client to reuse later, making the system more efficient.
+
+4. Layered System: The system can be designed in layers, with intermediaries between the client and the server to improve performance and scalability.
+
+Methods :-
+1. GET
+2. POST
+3. PUT
+4. DELETE
